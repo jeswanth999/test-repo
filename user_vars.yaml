@@ -1,0 +1,23 @@
+---
+  - hosts: all
+    become: yes
+    gather_facts: true
+
+    tasks:
+
+      - name: creatin users
+        user:
+          name: "{{ item }}
+          password: $1$CEwF5cgK$x6wO3B6TqbmvOiNF6JJC80
+          state: present 
+          shell: /bin/bash
+          createhome: yes
+          home: /home/""{item}""
+        
+
+        with_items:
+
+           - partho
+           - mano
+           - aravind
+           - jeswanth

@@ -1,0 +1,45 @@
+---
+  - hosts: all
+    become: yes
+    gather_facts: true
+
+    tasks:
+
+      - name: create user1
+        user:
+          name: partho
+          password: $1$CEwF5cgK$x6wO3B6TqbmvOiNF6JJC80
+          state: present 
+          shell: /bin/bash
+          createhome: yes
+          home: /home/partho
+
+
+      - name: create user2
+        user:
+          name: mano
+          password: $1$CEwF5cgK$x6wO3B6TqbmvOiNF6JJC80
+          state: present 
+          shell: /bin/bash
+          createhome: yes
+          home: /home/mano
+
+
+      - name: create user3
+        user:
+          name: aravind
+          password: $1$CEwF5cgK$x6wO3B6TqbmvOiNF6JJC80
+          state: present 
+          shell: /bin/bash
+          createhome: yes
+          home: /home/aravind
+
+
+      - name: create user4
+        user:
+          name: jeswanth
+          password: $1$CEwF5cgK$x6wO3B6TqbmvOiNF6JJC80
+          state: present 
+          shell: /bin/bash
+          createhome: yes
+          home: /home/jeswanth

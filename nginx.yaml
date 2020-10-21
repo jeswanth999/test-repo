@@ -1,0 +1,17 @@
+---
+  - hosts: all
+    become: yes
+    gather_facts: true
+
+    tasks:
+
+      - name: install nginx
+        package:
+          name: nginx
+          state: present
+
+      - name: start the service nginx 
+        service:
+          name: nginx
+          state: started
+~
